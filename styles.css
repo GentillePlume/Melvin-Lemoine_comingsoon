@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pixel{
+    display: inline-block;
+    background-color: none;
+}
+.pixel:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+body{
+    display: flex;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    flex-flow: row wrap;
+}
+
+#panel{
+    position: absolute;
+    
+    width: 50vw;
+    height: 100vh;
+    
+    transform: skew(-10deg, 0) translateX(-25vw);
+    
+    background-color: white;
+}
+
+#overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgba(0,0,0,.5);
+    
+    z-index: -99;
+}
+
+/*VIDEO BACKGROUND PROPERTIES*/
+#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../path) no-repeat;
+    background-size: cover;
+}
