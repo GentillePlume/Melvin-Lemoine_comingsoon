@@ -21,24 +21,7 @@ function builder(w, h, iteration) {
     }
     var pixelWidth = $(".pixel").width();
     var pixelHeight = $(".pixel").height();
-
-    /*console.log("Pixel width : " + pixelWidth);
-    console.log("Pixel height : " + pixelHeight);*/
 }
-
-$(".pixel").mouseenter(function () {
-
-    var target = this;
-
-    target.style.transition = "none";
-    console.log('%ctransition removed', 'color: red');
-
-    setTimeout(function () {
-        target.style.transition = "background-color 2s ease-out 0s";
-        console.log('%ctransition setted', 'color: green');
-    }, .1);
-});
-
 
 var statut;
 function databuild() {
@@ -50,9 +33,7 @@ function databuild() {
 
     var iteration;
 
-     //A CHAQUE FOIS QUE LA FONCTION SE LANCE LA VALEUR EST RESET CEST CA LE PROBLEME
-
-    if (screen_Width >= screen_Height * 2) {
+    if (screen_Width >= screen_Height * 2 - 0) {
         console.log("DOUBLE");
 
         w = w / 2;
@@ -94,4 +75,19 @@ $(document).ready(databuild());
 $(window).resize(function () {
     console.log("%cRESIZED", 'background-color: blue; color: white');
     databuild();
+});
+
+
+$(".pixel").mouseenter(function () {
+    console.log("ENTERED IN A PIXEL");
+
+    var target = this;
+
+    target.style.transition = "none";
+    console.log('%ctransition removed', 'color: red');
+
+    setTimeout(function () {
+        target.style.transition = "background-color 2s ease-out 0s";
+        console.log('%ctransition setted', 'color: green');
+    }, .1);
 });
