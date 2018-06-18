@@ -19,11 +19,13 @@ function builder(w, h, iteration) {
         document.getElementsByTagName('body')[0].appendChild(newDiv);
         console.log("Boucle done");
     }
+    pixelhover();
     var pixelWidth = $(".pixel").width();
     var pixelHeight = $(".pixel").height();
 }
 
 var statut;
+
 function databuild() {
     var screen_Width = $(window).width();
     var screen_Height = $(window).height();
@@ -77,17 +79,18 @@ $(window).resize(function () {
     databuild();
 });
 
+function pixelhover() {
+    $(".pixel").mouseenter(function () {
+        console.log("ENTERED IN A PIXEL");
 
-$(".pixel").mouseenter(function () {
-    console.log("ENTERED IN A PIXEL");
+        var target = this;
 
-    var target = this;
+        target.style.transition = "none";
+        console.log('%ctransition removed', 'color: red');
 
-    target.style.transition = "none";
-    console.log('%ctransition removed', 'color: red');
-
-    setTimeout(function () {
-        target.style.transition = "background-color 2s ease-out 0s";
-        console.log('%ctransition setted', 'color: green');
-    }, .1);
-});
+        setTimeout(function () {
+            target.style.transition = "background-color 2s ease-out 0s";
+            console.log('%ctransition setted', 'color: green');
+        }, .1);
+    });
+}
