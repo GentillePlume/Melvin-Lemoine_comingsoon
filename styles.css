@@ -1,50 +1,241 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim|Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+@import url('https://fonts.googleapis.com/css?family=Megrim');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    overflow: hidden;
 }
 
-.pixel{
+.pixel {
     display: inline-block;
-    background-color: none;
 }
-.pixel:hover{
+
+.pixel:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-body{
+body {
     display: flex;
-    
+
     width: 100vw;
     height: 100vh;
-    
+
     flex-flow: row wrap;
 }
 
-#panel{
+#panelcover {
+    display: flex;
     position: absolute;
-    
-    width: 50vw;
+
+    width: 10vw;
     height: 100vh;
-    
-    transform: skew(-10deg, 0) translateX(-25vw);
-    
-    background-color: white;
+
+    background-color: rgba(255,255,255,.5);
+
+    z-index: 1;
 }
 
-#overlay{
+#panelcover2 {
+    display: flex;
     position: absolute;
+
+    width: 30vw;
+    height: 100vh;
+
+    transform: skew(7deg, 0);
+
+    background-color: rgba(255,255,255,.5);
+
+    z-index: 1;
+}
+
+#panelcover3 {
+    display: flex;
+    position: absolute;
+
+    width: 30vw;
+    height: 100vh;
+
+    transform: skew(12deg, 0);
+
+    background-color: rgba(255,255,255,.5);
+
+    z-index: 1;
+}
+
+#panel {
+    display: flex;
+    position: absolute;
+
+    width: 30vw;
+    height: 100vh;
+
+    flex-flow: column nowrap;
+    align-items: center;
+
+    transform: skew(10deg, 0);
+
+    background-color: white;
+
+    z-index: 1;
+}
+
+#profilimage {
+    display: flex;
+
+    width: 100%;
+    height: auto;
+
+    transform: skew(-10deg, 0) translateX(2vw);
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    background-image: url(img/me.JPG);
+    background-position: left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    background-color: red;
+}
+
+#separator {
+    display: inline-block;
+
+    width: 100%;
+    height: 1%;
+
+    background-color: blue;
+}
+
+#name {
+    display: inline-block;
+
+    width: 25vw;
+    height: auto;
+
+    font-size: 3vw;
+    font-family: 'Poiret One';
+    text-align: center;
+
+    transform: skew(-10deg, 0);
+}
+
+#container_statut {
+    display: flex;
+
+    width: auto;
+    max-width: 75%;
+    height: auto;
+
+    transform: skew(-10deg, 0);
+}
+
+#statut {
+    display: inline-block;
+
+    font-size: 1.75vw;
+    font-family: 'Poiret One';
+    text-align: center;
+}
+
+#container_statut svg {
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+    
+    margin-right: 15px;
+}
+
+#container_bio {
+    display: flex;
+
+    width: 25vw;
+    height: auto;
+    
+    margin-top: 15%;
+
+    transform: skew(-10deg, 0);
+
+    justify-content: center;
+    align-items: center;
+}
+
+#bio {
+    display: inline-block;
+
+    width: 90%;
+    height: auto;
+
+    font-size: 25px;
+    font-family: 'Neucha';
+    text-align: justify;
+}
+
+#panelfooter {
+    display: flex;
+
+    width: 100%;
+    height: 7.5vh;
+    
+    margin-top: auto;
+    margin-bottom: 1%;
+
+    flex-flow: row nowrap;
+
+    justify-content: center;
+    align-content: center;
+
+    transform: skew(-10deg, 0);
+}
+
+#panelfooter div {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#panelfooter div:hover svg{
+    margin-bottom: 5%;
+}
+
+#panelfooter svg {
+    display: inline-block;
+
+    width: 70%;
+    height: 70%;
+
+    transition: all .3s ease-in-out 0s;
+}
+
+#panelfooter svg:hover {
+    width: 90%;
+    height: 90%;
+}
+
+#overlay {
+    display: inline-block;
+    position: fixed;
+
     width: 100vw;
     height: 100vh;
-    
-    background-color: rgba(0,0,0,.5);
-    
+
+    background-color: rgba(0, 0, 0, .5);
+
     z-index: -99;
 }
 
 /*VIDEO BACKGROUND PROPERTIES*/
+
 #bgvid {
     position: fixed;
     top: 50%;
