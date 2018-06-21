@@ -199,7 +199,7 @@ body {
 
     padding: 1%;
 
-    margin-left: 37.5vw;
+    margin-left: 40vw;
     margin-top: 15vh;
 
     font-size: 5vw;
@@ -229,10 +229,10 @@ body {
 
     bottom: 0;
 
-    width: 75vw;
+    width: 70vw;
     height: auto;
 
-    margin-left: 25vw;
+    margin-left: 30vw;
     margin-bottom: 25vh;
 
     flex-flow: row nowrap;
