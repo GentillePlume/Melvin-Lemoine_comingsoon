@@ -86,15 +86,15 @@ var TextScramble = function () {
 // Example
 // ——————————————————————————————————————————————————
 
-var phrases = ['Neo,', 'sooner or later', 'you\'re going to realize', 'just as I did', 'that there\'s a difference', 'between knowing the path', 'and walking the path'];
+var phrases = ['Étudiant dans le digital', 'Développement web', 'Design', 'Communication', 'Marketing', 'Vidéo', 'Projets de fou'];
 
-var el = document.querySelector('.text');
+var el = document.querySelector('#statut');
 var fx = new TextScramble(el);
 
 var counter = 0;
 var next = function next() {
   fx.setText(phrases[counter]).then(function () {
-    setTimeout(next, 800);
+    setTimeout(next, 1500);
   });
   counter = (counter + 1) % phrases.length;
 };
