@@ -215,22 +215,25 @@ body {
     height: 90%;
 }
 
-h1 {
+#me {
     display: inline-block;
 
-    width: 50vw;
+    width: 60vw;
     height: auto;
 
     padding: 1%;
     
-    margin-left: 37.5vw;
+    margin-left: 35vw;
     margin-top: 15vh;
 
     font-size: 5vw;
     font-family: 'Poiret One';
     color: white;
+}
 
-    background-color: rgba(0, 0, 0, .5);
+#typed{
+    color: #ff80f0;
+    font-weight: bolder;
 }
 
 #buttons {
