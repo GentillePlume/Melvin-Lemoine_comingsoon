@@ -94,13 +94,6 @@ body {
 
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
-    background-image: url(img/me.JPG);
-    background-position: left;
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-    background-color: red;
 }
 
 #separator {
