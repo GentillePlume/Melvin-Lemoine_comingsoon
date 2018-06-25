@@ -18,7 +18,7 @@ setTimeout(function () {
 //##############################################################
 
 $("#panel").mouseenter(function(){
-    console.log("entered the panel");
+    /*console.log("entered the panel");*/
     
     $("#panelcover1")[0].style.transform = "skew(4deg, 0) translateX(1vw)";
     $("#panelcover2")[0].style.transform = "skew(-7deg, 0) translateX(1vw)";
@@ -26,7 +26,7 @@ $("#panel").mouseenter(function(){
 });
 
 $("#panel").mouseleave(function(){
-    console.log("entered the panel");
+    /*console.log("left the panel");*/
     
     $("#panelcover1")[0].style.transform = "skew(2deg, 0)";
     $("#panelcover2")[0].style.transform = "skew(-4deg, 0)";
