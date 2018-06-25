@@ -159,6 +159,40 @@ body {
     text-align: justify;
 }
 
+#cv{
+    display: flex;
+    
+    width: 25%;
+    height: auto;
+    
+    margin-top: auto;
+    padding: 5%;
+    
+    justify-content: center;
+    align-items: center;
+    
+    background-color: purple;   
+    
+    transition: all .3s ease-in-out 0s;
+}
+
+#cv:hover{
+    width: 100%;
+    
+    border-radius: 0px;
+}
+
+#cv p{
+    display: inline-block;
+    
+    width: auto;
+    height: auto;
+    
+    font-size: 1.5vw;
+    font-family: 'Poiret One';
+    color: white;
+}
+
 #panelfooter {
     display: flex;
 
@@ -166,7 +200,7 @@ body {
     height: 7.5vh;
 
     margin-top: auto;
-    margin-bottom: 1%;
+    margin-bottom: 2.5%;
 
     flex-flow: row nowrap;
 
@@ -184,22 +218,18 @@ body {
     align-items: flex-end;
 }
 
-#panelfooter div:hover svg {
-    margin-bottom: 5%;
-}
-
 #panelfooter svg {
     display: inline-block;
 
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
 
     transition: all .3s ease-in-out 0s;
 }
 
 #panelfooter svg:hover {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
 }
 
 #me {
