@@ -46,7 +46,7 @@ body {
     background-color: rgba(255, 255, 255, .5);
     z-index: 1;
     
-    transition: all 1s ease-in-out 0s;
+    transition: transform 1s ease-in-out 0s;
     
     pointer-events: none;
 }
