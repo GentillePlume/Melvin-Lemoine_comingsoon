@@ -72,10 +72,16 @@ body {
 
     flex-flow: column nowrap;
     align-items: center;
+    
+    transform: skewX(10deg);
 
     background-color: white;
 
     z-index: 1;
+}
+
+#panel > *{
+    transform: skewX(-10deg);
 }
 
 #profilimage {
@@ -142,7 +148,7 @@ body {
     width: 25vw;
     height: auto;
 
-    margin-top: 15%;
+    margin-top: 10%;
 
     justify-content: center;
     align-items: center;
@@ -166,20 +172,18 @@ body {
     height: auto;
     
     margin-top: auto;
-    padding: 5%;
+    padding: 1% 5%;
     
     justify-content: center;
     align-items: center;
     
     background-color: purple;   
     
-    transition: all .3s ease-in-out 0s;
+    transition: transform 0s ease-in-out 0s, width .5s ease-in-out 0s;
 }
 
 #cv:hover{
-    width: 100%;
-    
-    border-radius: 0px;
+    width: 105%;
 }
 
 #cv p{
@@ -191,6 +195,8 @@ body {
     font-size: 1.5vw;
     font-family: 'Poiret One';
     color: white;
+    
+    transition: transform 0s;
 }
 
 #panelfooter {
