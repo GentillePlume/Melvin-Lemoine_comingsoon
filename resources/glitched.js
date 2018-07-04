@@ -86,7 +86,7 @@ var TextScramble = function () {
 // Example
 // ——————————————————————————————————————————————————
 
-var phrases = ['Étudiant dans le digital', 'Développement web', 'Design', 'Communication', 'Marketing', 'Vidéo', 'Projets de fou'];
+var phrases = ['Étudiant dans le digital'];
 
 var el = document.querySelector('#statut');
 var fx = new TextScramble(el);
@@ -94,7 +94,7 @@ var fx = new TextScramble(el);
 var counter = 0;
 var next = function next() {
   fx.setText(phrases[counter]).then(function () {
-    setTimeout(next, 1500);
+    setTimeout(next, 5000);
   });
   counter = (counter + 1) % phrases.length;
 };
