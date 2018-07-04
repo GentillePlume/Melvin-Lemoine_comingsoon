@@ -87,7 +87,7 @@ body {
 #profilimage {
     display: flex;
 
-    width: 100%;
+    width: 115%;
     height: auto;
 
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
