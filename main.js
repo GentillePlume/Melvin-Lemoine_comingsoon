@@ -20,9 +20,9 @@ setTimeout(function () {
 $("#panel").mouseenter(function(){
     /*console.log("entered the panel");*/
     
-    $("#panelcover1")[0].style.transform = "skew(4deg, 0) translateX(1vw)";
-    $("#panelcover2")[0].style.transform = "skew(-7deg, 0) translateX(1vw)";
-    $("#panelcover3")[0].style.transform = "skew(4deg, 0) translateX(1vw)";
+    $("#panelcover1")[0].style.transform = "skew(10deg, 0) translateX(1vw)";
+    $("#panelcover2")[0].style.transform = "skew(-3.5deg, 0) translateX(1vw)";
+    $("#panelcover3")[0].style.transform = "skew(1deg, 0) translateX(1vw)";
 });
 
 $("#panel").mouseleave(function(){
