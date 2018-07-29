@@ -259,15 +259,6 @@ body {
     pointer-events: none;
 }
 
-@keyframes Iam {
-    from {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    to {
-        background-color: rgba(0, 0, 0, 0.25);
-    }
-}
-
 #typed {
     color: #ff80f0;
     font-weight: bolder;
