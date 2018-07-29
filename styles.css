@@ -254,7 +254,7 @@ body {
     font-family: 'Poiret One';
     color: white;
 
-    background-color: rgba(0, 0, 0, 0);
+    background-color: none;
     
     pointer-events: none;
 }

@@ -1,8 +1,5 @@
 setTimeout(function () {
     $("#me")[0].style.display = "inline-block";
-    setTimeout(function () {
-        $("#me")[0].style.animationName = "Iam";
-    }, 1050);
 }, 1000);
 
 setTimeout(function () {
