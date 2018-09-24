@@ -8,6 +8,7 @@ setTimeout(function() {
     typeSpeed: 75,
     backDelay: 3000,
     fadeOut: true,
-    loop: true
+    loop: true,
+    cursor: false
   });
 }, 2500);
