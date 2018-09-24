@@ -9,6 +9,6 @@ setTimeout(function() {
     backDelay: 3000,
     fadeOut: true,
     loop: true,
-    cursor: false
+    showCursor: false
   });
 }, 2500);
