@@ -7,6 +7,11 @@ MAIN PROPERTIES
 @import url('https://fonts.googleapis.com/css?family=Neucha');
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
+@font-face {
+  font-family: advancedDotDigital;
+  src: url(../fonts/advanced_dot_digital-7.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,14 +26,49 @@ MAIN PROPERTIES
   user-select: none;
 }
 
+header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100px;
+  align-items: center;
+  /* background-color: red; */
+}
+
+header img {
+  height: 100%;
+  /* background-color: blue; */
+}
+
+header p {
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: advancedDotDigital;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 body {
   display: flex;
+  position: relative;
   width: 100vw;
   height: 100vh;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   background-color: white;
+}
+
+main {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 25px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
@@ -67,4 +107,34 @@ h2 {
   font-family: "Pacifico";
   font-weight: lighter;
   color: rgb(91, 91, 91);
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 25vw;
+  height: 100px;
+  z-index: 100;
+}
+
+.network__icon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.network__icon img {
+  display: inline-block;
+  width: auto;
+  height: 55%;
+  cursor: pointer;
+  transition: height .1s ease-in-out;
+}
+
+.network__icon img:hover {
+  height: 57.5%;
 }
