@@ -1,12 +1,31 @@
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _createClass = function() {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+  return function(Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
 
 // ——————————————————————————————————————————————————
 // TextScramble
 // ——————————————————————————————————————————————————
 
-var TextScramble = function () {
+var TextScramble = function() {
   function TextScramble(el) {
     _classCallCheck(this, TextScramble);
 
@@ -22,7 +41,7 @@ var TextScramble = function () {
 
       var oldText = this.el.innerText;
       var length = Math.max(oldText.length, newText.length);
-      var promise = new Promise(function (resolve) {
+      var promise = new Promise(function(resolve) {
         return _this.resolve = resolve;
       });
       this.queue = [];
@@ -31,7 +50,12 @@ var TextScramble = function () {
         var to = newText[i] || '';
         var start = Math.floor(Math.random() * 40);
         var end = start + Math.floor(Math.random() * 40);
-        this.queue.push({ from: from, to: to, start: start, end: end });
+        this.queue.push({
+          from: from,
+          to: to,
+          start: start,
+          end: end
+        });
       }
       cancelAnimationFrame(this.frameRequest);
       this.frame = 0;
@@ -45,11 +69,11 @@ var TextScramble = function () {
       var complete = 0;
       for (var i = 0, n = this.queue.length; i < n; i++) {
         var _queue$i = this.queue[i],
-            from = _queue$i.from,
-            to = _queue$i.to,
-            start = _queue$i.start,
-            end = _queue$i.end,
-            char = _queue$i.char;
+          from = _queue$i.from,
+          to = _queue$i.to,
+          start = _queue$i.start,
+          end = _queue$i.end,
+          char = _queue$i.char;
 
         if (this.frame >= end) {
           complete++;
@@ -86,14 +110,14 @@ var TextScramble = function () {
 // Example
 // ——————————————————————————————————————————————————
 
-var phrases = ['Étudiant dans le digital'];
+var phrases = ['site en cours de développement', 'cliquez ici pour plus d\'informations'];
 
-var el = document.querySelector('#statut');
+var el = document.querySelector('header p');
 var fx = new TextScramble(el);
 
 var counter = 0;
 var next = function next() {
-  fx.setText(phrases[counter]).then(function () {
+  fx.setText(phrases[counter]).then(function() {
     setTimeout(next, 5000);
   });
   counter = (counter + 1) % phrases.length;
