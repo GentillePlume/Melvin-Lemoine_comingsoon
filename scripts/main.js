@@ -12,3 +12,11 @@ setTimeout(function() {
     showCursor: false
   });
 }, 2500);
+
+// ##################################################
+//         HOME BACKGROUND STYLES ANIMATIONS
+// ##################################################
+
+for (i = 0; i < $(".home__style").length; i++) {
+  $(".home__style")[i].style.animationDuration = Math.floor((Math.random() * 15) + 5) + "s";
+}
