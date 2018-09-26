@@ -205,3 +205,65 @@ footer {
 .network__icon img:hover {
   height: 57.5%;
 }
+
+#status {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: 20vh;
+  margin-left: 50px;
+  /* border: 1px solid black; */
+  /* justify-content: center; */
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.status__container {
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+  /* border: 1px solid blue; */
+}
+
+.status__container--left {
+  align-items: center;
+  width: 20%;
+}
+
+.status__container--right {
+  width: 80%;
+}
+
+.status__line {
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+}
+
+.status__image {
+  margin-top: 25px;
+  height: 75px;
+  padding: 15px;
+  background-color: white;
+  z-index: 2;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.status__title {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 32.5px;
+  padding: 15px;
+}
+
+.status__desc {
+  text-transform: none;
+  font-weight: lighter;
+}
