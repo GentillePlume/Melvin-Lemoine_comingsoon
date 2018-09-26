@@ -151,7 +151,7 @@ PROFIL
   border-radius: 50%;
   border: 10px solid white;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, .25);
-  background-image: url(../img/me.jpg);
+  background-image: url(../img/me.JPG);
   background-position: 85% 25%;
   background-size: 130%;
   transition: box-shadow .3s ease-in-out 0s;
