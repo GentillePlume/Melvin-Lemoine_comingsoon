@@ -38,15 +38,14 @@ header {
 }
 
 header img {
-  height: 150px;
+  height: 7.5vw;
 }
 
 header p {
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 1vw;
   font-family: advancedDotDigital;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 body {
@@ -75,7 +74,76 @@ main {
 MAIN PAGE
 ##################################################
 */
-#profil {
+/*
+##################################################
+HOME BACKGROUND STYLES
+##################################################
+*/
+.home__style {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 50vw;
+  max-height: 75vh;
+  transform: translate(100px);
+  animation-name: home_background_style;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: opacity 1s ease-in-out 0s;
+}
+
+.home__style_1 {
+  width: 25vw;
+  /* background-color: red; */
+  z-index: 10;
+}
+
+.home__style_2 {
+  width: 50vw;
+  /* background-color: red; */
+  z-index: 9;
+}
+
+.home__style_3 {
+  width: 50vw;
+  /* background-color: red; */
+  z-index: 8;
+}
+
+.home__style_4 {
+  height: 50vh;
+  width: 50vh;
+  /* background-color: red; */
+  z-index: 7;
+}
+
+.home__style_5 {
+  width: 50vw;
+  /* background-color: blue; */
+  z-index: 6;
+}
+
+@keyframes home_background_style {
+  from {
+    transform: translate(100px);
+  }
+
+  50% {
+    transform: translate(50px);
+  }
+
+  to {
+    transform: translate(100px);
+  }
+}
+
+/*
+##################################################
+PROFIL
+##################################################
+*/
+.profil__image {
   display: inline-block;
   width: 300px;
   height: 300px;
@@ -89,17 +157,17 @@ MAIN PAGE
   transition: box-shadow .3s ease-in-out 0s;
 }
 
-#profil:hover {
+.profil__image:hover {
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, .5);
 }
 
-h1 {
+.profil__name {
   margin-top: 3vh;
   font-size: 2.5em;
   font-family: "Poiret One";
 }
 
-h2 {
+.profil__desc {
   height: auto;
   padding: 2.5px;
   font-size: 1.5em;
