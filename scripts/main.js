@@ -44,16 +44,43 @@ $("header").click(function() {
   $(".status__image")[0].style.animationName = "bounceOut";
   $(".status__title")[0].style.animationName = "fadeOutRight";
   $(".status__desc")[0].style.animationName = "fadeOutRight";
-  setTimeout(function() {
-    $("#status")[0].style.display = "none";
-
-    for (i = 0; i < $(".home__style").length; i++) {
-      $(".home__style")[i].style.display = "none";
-    }
-  }, 1000);
 
   // HEADER
   $(".header__img")[0].style.animationName = "fadeOut";
-  $(".header__p")[0].style.animationName = "fadeOutUp";
+  $(".header__p")[0].style.animationName = "fadeOut";
+
+  setTimeout(function() {
+    $(".header__arrow_container")[0].style.display = "flex";
+
+    $(".header__arrow")[0].style.display = "inline-block";
+
+  }, 1000);
+
+  // HIDE ELEMENTS
+  setTimeout(function() {
+    $("#status")[0].style.visibility = "hidden";
+
+    $(".profil__image")[0].style.display = "none";
+    $(".profil__name")[0].style.display = "none";
+    $(".profil__desc")[0].style.display = "none";
+
+    for (i = 0; i < $(".home__style").length; i++) {
+      $(".home__style")[i].style.visibility = "hidden";
+    }
+
+    $(".header__img")[0].style.display = "none";
+    $(".header__p")[0].style.display = "none";
+
+    // SITES
+    for (i = 0; i < $(".site").length; i++) {
+      $(".site")[i].style.display = "flex";
+    }
+  }, 1000);
+
+
 
 })
+
+// ##################################################
+//                  SITES DATA
+// ##################################################

@@ -9,7 +9,12 @@ MAIN PROPERTIES
 
 @font-face {
   font-family: advancedDotDigital;
-  src: url(../fonts/advanced_dot_digital-7.ttf);
+  src: url("../fonts/advanced_dot_digital-7.ttf");
+}
+
+@font-face {
+  font-family: theLedDigital;
+  src: url("../fonts/The Led Display St.ttf");
 }
 
 * {
@@ -33,19 +38,52 @@ header {
   left: 0;
   width: auto;
   height: auto;
+  padding: 5px;
   align-items: center;
   cursor: pointer;
+  /* background-color: red; */
 }
 
-header img {
+.header__img {
   height: 7.5vw;
 }
 
-header p {
+.header__p {
   margin-left: 15px;
   font-size: 1vw;
   font-family: advancedDotDigital;
   text-transform: uppercase;
+}
+
+.header__arrow_container {
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin: 25px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  animation-name: header__arrow_container_ON;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes header__arrow_container_ON {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.header__arrow {
+  display: none;
+  height: 75%;
+  transform: translateX(50px);
 }
 
 body {
@@ -54,20 +92,22 @@ body {
   width: 100vw;
   height: 100vh;
   flex-flow: column;
-  justify-content: justify;
+  justify-content: center;
   align-items: center;
   background-color: white;
 }
 
 main {
   display: flex;
-  width: auto;
-  height: auto;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   padding: 25px;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   /* background-color: red; */
+  z-index: -1;
 }
 
 /*
@@ -141,6 +181,96 @@ HOME BACKGROUND STYLES
 
 /*
 ##################################################
+SITES
+##################################################
+*/
+.site {
+  display: none;
+  /* position: absolute; */
+  width: 50vw;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.site:nth-child(even) {
+  animation-name: fadeInLeft;
+}
+
+.site:nth-child(odd) {
+  animation-name: fadeInRight;
+}
+
+.site__name_container {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.site_1 .site__name_container {
+  background-color: red;
+}
+
+.site_2 .site__name_container {
+  background-color: orange;
+}
+
+.site_3 .site__name_container {
+  background-color: blue;
+}
+
+.site_4 .site__name_container {
+  background-color: green;
+}
+
+.site_5 .site__name_container {
+  background-color: grey;
+}
+
+.site__name {
+  font-size: 50px;
+  padding: 30px 0;
+  font-family: 'Poiret One';
+  text-transform: uppercase;
+  color: white;
+}
+
+.site__level_container {
+  width: 40%;
+  height: 10px;
+}
+
+.site__level {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+
+.site__percent_container {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+}
+
+.site__percent {
+  font-size: 50px;
+  font-family: 'Poiret One';
+  text-transform: uppercase;
+  color: black;
+}
+
+/*
+##################################################
 PROFIL
 ##################################################
 */
@@ -148,7 +278,7 @@ PROFIL
   display: inline-block;
   width: 300px;
   height: 300px;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
   border-radius: 50%;
   border: 10px solid white;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, .25);
@@ -169,7 +299,7 @@ PROFIL
 }
 
 .profil__desc {
-  height: auto;
+  height: 50px;
   padding: 2.5px;
   font-size: 1.5em;
   font-family: "Pacifico";
